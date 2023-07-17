@@ -1,0 +1,211 @@
+/* global  style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color--: #cb3931;
+  --secondary-color--: #f0f0f0;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color--) 50%,
+    var(--main-color--) 50%
+  );
+  background-repeat: no-repeat;
+}
+
+/* media query  */
+
+/* 570px */
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+/* 768px  */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* 992px  */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* 1200px  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* 1400px  */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+
+/* container style  */
+.container {
+  width: 50%;
+  background-color: #fff;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  padding-left: 70px;
+  position: relative;
+  box-shadow: 1px 1px 20px 5px rgb(179 179 179);
+}
+@media (max-width: 1400px) {
+    .container {
+      width: 100%;
+      padding: 0;
+      padding: 20px;
+    }
+  }
+
+/* top  */
+.top {
+  display: grid;
+  grid-template-columns: 30% 50%;
+  gap: 20px;
+}
+.top .personal-information {
+  color: var(--main-color--);
+  margin-top: 70px;
+}
+.top .photo {
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  z-index: 4;
+}
+.top .photo img {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color--);
+}
+
+@media (max-width: 1400px) {
+    .container .top{
+        grid-template-columns: 100%;
+    }
+    .container .top .photo {
+      display: none;
+    }
+  }
+
+/* middle  */
+.middle {
+  background-color: var(--secondary-color--);
+  padding-left: 70px;
+  padding-top: 150px;
+  position: relative;
+}
+.middle h1 {
+  font-size: 80px;
+  padding-top: 50px;
+}
+.middle h1 span ul {
+  list-style: none;
+  font-size: 15px;
+  display: inline-block;
+  color: var(--main-color--);
+  font-weight: 500;
+  padding-left: 20px;
+}
+.middle .second-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.middle .second-section .job-title {
+  text-transform: uppercase;
+  color: var(--main-color--);
+  font-weight: 600;
+}
+.middle .second-section .social ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.middle .second-section .social i {
+  color: black;
+}
+@media (max-width: 1400px) {
+    .middle{
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    .middle h1{
+        font-size: 50px;
+    }
+    .middle h1 span ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 10px;
+        background-color: var(--main-color--);
+        color: var(--secondary-color--);
+        padding: 10px;
+        border-radius: 0 0 10px 0;
+      }
+  }
+
+/* bottom  */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px;
+  margin-top: 30px;
+}
+.bottom .experience h2,
+.bottom .education h2 {
+  color: var(--main-color--);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.bottom .experience .block .title {
+  font-weight: 700;
+}
+.bottom .block span {
+  color: var(--main-color--);
+}
+.bottom .block em {
+  font-weight: 500;
+}
+.bottom .block .description {
+  color: #6a6a6a;
+}
+.bottom .block {
+  margin: 20px 0;
+}
+.bottom .education .education-name {
+  color: var(--main-color--);
+  text-transform: uppercase;
+  font-weight: 700;
+}
